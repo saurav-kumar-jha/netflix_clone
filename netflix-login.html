@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Login Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(download-4.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            height: 100%;
+            width: 100%;
+            border-color: linear-gradient(180deg, rgba(0, 0, 0, .5) 0, transparent);
+            /* background: linear-gradient(180deg, rgba(78, 74, 74, 0.5) 0, transparent); */
+            /* background-color: rgba(77, 54, 54, 0.336); */
+            font-family:'poppins',sans-serif;
+            /* overflow-x: hidden; */
+            overflow-y: visible;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            /* background-image: url(download-4.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover; */
+        }
+
+        header {
+            background: linear-gradient(180deg, rgba(0, 0, 0, .5) 0, transparent);
+            border-bottom: transparent;
+            left: 0;
+            position: absolute;
+            top: 0;
+            height: 90px;
+            width: 100%;
+        }
+
+
+        .logo img {
+            height: 90px;
+            vertical-align: middle;
+            width: 167px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin-left: 30px;
+        }
+
+        .logo img:hover {
+            border: 2px solid white;
+            font-size: 14px;
+        }
+
+        main {
+            height: 700px;
+            width: 100%;
+            /* padding: 186px 487px; */
+            margin-top: 13%;
+            margin-left: 34%;
+            margin-right: 0%;
+        }
+
+        .main-login-page {
+            padding: 60px 68px 40px;
+        }
+
+        .login-page {
+            height: 660px;
+            width: 450px;
+            background-color: rgba(0, 0, 0, 0.856);
+            /* padding: 0px 437px ;
+            padding-top: 10px; */
+            border-radius: 3px;
+        }
+
+        .main-login {
+            height: 361px;
+            width: 314px;
+        }
+        ::placeholder{
+            opacity: 1;
+        }
+
+        .main-login h1 {
+            height: 45px;
+            width: 314px;
+        }
+
+        .main-login form {
+            height: 235px;
+            width: 314px;
+        }
+
+        .inputenter {
+            height: 66px;
+            width: 314px;
+            padding-bottom: 16px;
+        }
+
+        .inputenter input {
+            height: 50px;
+            width: 314px;
+            background-color: rgba(48, 43, 43, 0.808);
+            border: none;
+            font-size: 17px;
+            padding: 10px;
+            appearance: none;
+            outline: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .inputpass {
+            height: 66px;
+            width: 314px;
+        }
+        input:required{
+            background-color: rgb(100, 32, 32);
+        }
+        .inputpass input {
+            height: 50px;
+            width: 314px;
+            background-color: rgba(48, 43, 43, 0.808);
+            border: none;
+            font-size: 17px;
+            padding: 10px;
+            outline: none;
+            appearance: none;
+            color: white;
+            /* box-sizing: border-box; */
+            border-radius: 5px;
+        }
+
+        .btn {
+            height: 48px;
+            width: 314px;
+            margin-top: 25px;
+        }
+
+        .btn button {
+            height: 48px;
+            width: 314px;
+            display: inline-block;
+            /* font-size: 13px; */
+            line-height: 1em;
+            /* margin-right: 0.5em; */
+            min-height: 37px;
+            min-width: 98px;
+            cursor: pointer;
+            background-color: red;
+            border: 0;
+            text-align: center;
+            font-size: 19px;
+            font-weight: 500;
+            color: white;
+            /* padding: 0.75rem 1em; */
+            /* width: auto; */
+        }
+
+        .login-help {
+            height: 19px;
+            width: 314px;
+            margin-top: 16px;
+            display: flex;
+        }
+
+        .checkbox {
+            height: 19px;
+            width: 247px;
+        }
+
+        a {
+            height: 19px;
+            width: 67px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .other-login {
+            height: 199px;
+            width: 314px;
+        }
+
+        .sign-up {
+            height: 21px;
+            width: 314px;
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        .sign-up a {
+            height: 21px;
+            width: 87px;
+        }
+
+        .recapcha {
+            height: 149px;
+            width: 314px;
+            font-size: 13px;
+            color: #8c8c8c;
+            margin-top: 11px;
+        }
+
+        .recapcha p {
+            height: 34px;
+            width: 314px;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        .recapcha span {
+            height: 34px;
+            width: 284px;
+            font-size: 13px;
+        }
+
+        .recapcha-btn {
+            height: 17px;
+            width: 70px;
+            background-color: transparent;
+            border: none;
+            color: #0071eb;
+            cursor: pointer;
+            display: inline;
+            font-family: inherit;
+            font-size: inherit;
+            padding: 0;
+        }
+
+        .recapcha-google {
+            height: 102px;
+            width: 314px;
+        }
+
+        footer {
+            width: 100%;
+            height: 265px;
+            background-color: rgba(0, 0, 0, .75);
+            color: #757575;
+            font-size: 1em;
+            min-width: 190px;
+            padding-bottom: 20px;
+            position: relative;
+            margin-top: 0;
+        }
+
+        .site-footer {
+            color: #737373;
+            /* background-color: red; */
+            height: 265px;
+            width: 1000px;
+            margin-left: 10%;
+            margin-top: 5%;
+            padding-top: 20px;
+            z-index: 10;
+        }
+
+        .footer-top {
+            height: 21px;
+            width: 1000px;
+            padding-bottom: 12px;
+            padding-left: 10px;
+            margin-left: 28px;
+            z-index: 10;
+        }
+
+        .footer-ul-item {
+            height: 66px;
+            width: 1000px;
+            /* box-sizing: border-box; */
+            font-size: 13px;
+            max-width: 1000px;
+            display: flex;
+            /* gap: 50px; */
+            flex-wrap: wrap;
+            color: #737373;
+            z-index: 10;
+        }
+
+        .footer-list-item {
+            text-decoration: none;
+            list-style-type: none;
+            height: 17px;
+            width: 250px;
+            margin: 0px 0px 16px ;
+            padding: 0px 0px 0px 0px;
+            /* color: #737373; */
+            z-index: 10;
+        }
+        .footer-list-item a{
+            color: #737373;
+            /* width: 250px; */
+            z-index: 10;
+        }
+        .footer-list-item a:hover{
+            text-decoration: underline;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="580b57fcd9996e24bc43c529.png" alt="none">
+            </div>
+        </header>
+        <main>
+            <div class="login-page">
+                <div class="main-login-page">
+                    <div class="main-login">
+                        <h1>Sign in</h1>
+                        <form action="#">
+                            <div class="inputenter">
+                                <input type="text " placeholder="Enter username">
+                            </div>
+                            <div class="inputpass">
+                                <input type="password" placeholder="Enter password">
+                            </div>
+                            <div class="btn">
+                                <button type="submit">Sign in </button>
+                            </div>
+                            <div class="login-help">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="check"><label for="check">Remember me</label>
+                                </div>
+                                <a href="#">Need help</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="other-login">
+                        <div class="sign-up">
+                            New to Netflix?
+                            <a href="#">Sign up now</a>
+                        </div>
+                        <div class="recapcha">
+                            <p>
+                                <span>This page is protected by Google reCAPTCHA to ensure you're not a bot.</span>
+                                <button class="recapcha-btn btn">Learn more.</button>
+                            </p>
+                            <!-- <button class="recapcha-btn">Learn more.</button> -->
+                            <div class="recapcha-google"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="site-footer">
+                <p class="footer-top">Questions? Call 000-800-919-1694</p>
+                <ul class="footer-ul-item">
+                    <li class="footer-list-item"><a href="#"><span>FAQ</span></a></li>
+                    <li class="footer-list-item"><a href="#"><span>Help Centre</span></a></li>
+                    <li class="footer-list-item"><a href="#"><span>Terms of Use</span></a></li>
+                    <li class="footer-list-item"><a href="#"><span>Privacy</span></a></li>
+                    <li class="footer-list-item"><a href="#"><span>Cookie Preferences</span></a></li>
+                    <li class="footer-list-item"><a href="#"><span>Corporate Information</span></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
